@@ -2,19 +2,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.pact.hello">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
+        android:name=".framework.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".banner.BannerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <!--Gilde加载的图标默认是RGB_565，将Bitmap格式转换到ARGB_8888-->
+        <meta-data
+            android:name="com.pact.hello.framework.GlideConfiguration"
+            android:value="GlideModule"/>
     </application>
 
 </manifest>
