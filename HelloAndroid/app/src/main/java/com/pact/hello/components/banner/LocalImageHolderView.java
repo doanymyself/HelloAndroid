@@ -1,4 +1,4 @@
-package com.pact.hello.banner;
+package com.pact.hello.components.banner;
 
 import android.content.Context;
 import android.view.View;
